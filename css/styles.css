@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.main-nav {
+  background-color: #333;
+}
+
+.main-menu {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.main-menu__item {
+  text-decoration: none;
+}
+
+.main-menu__link {
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+  color: lightcoral;
+  text-decoration: none;
+  letter-spacing: 5px;
+  line-height: 4rem;
+}
+
+.main-menu__link--active {
+  border-bottom: 2px solid;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+.button {
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.button--dark {
+  background-color: #333;
+  color: lightcoral;
+}
+
+.button--red {
+  background-color: red;
+  color: beige;
+}
+
+.button--ghost {
+  border: 1px solid;
+  background-color: transparent;
+}
+
+.button--blue {
+  color: #333;
+  background-color: royalblue;
+}
+
+.button--block {
+  width: 100%;
+}
+
+/* Efectos en imágenes */
+
+.img-container {
+  position: relative;
+  margin: 2rem;
+  overflow: hidden;
+}
+
+.img-container::after,
+.img-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+.img-container::before {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.img-container::after {
+  content: 'Gato Pidiendo Comida';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  font-size: 2rem;
+}
+
+.img-container--scale::after,
+.img-container--scale::before {
+  transform: scale(0);
+}
+
+.img-container:hover.img-container--scale::after,
+.img-container:hover.img-container--scale::before {
+  transform: scale(1);
+}
+
+.img-container--left::after,
+.img-container--left::before {
+  transform: translateX(-100%);
+}
+
+.img-container:hover.img-container--left::after,
+.img-container:hover.img-container--left::before {
+  transform: translateX(0);
+}
+
+.img-container--bottom::after,
+.img-container--bottom::before {
+  transform: translateY(100%);
+}
+
+.img-container:hover.img-container--bottom::after,
+.img-container:hover.img-container--bottom::before {
+  transform: translateY(0);
+}
+
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
