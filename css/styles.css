@@ -1,3 +1,10 @@
+/* 
+METODOLOGIAS DE ESCRITURA CSS
+BEM
+BEMit
+OOCSS
+*/
+
 body {
   margin: 0;
   font-family: sans-serif;
@@ -28,6 +35,18 @@ body {
   text-decoration: none;
   letter-spacing: 5px;
   line-height: 4rem;
+}
+
+@media screen and (min-width: 600px) {
+  .main-menu__link {
+    background-image: url(/assets/images/cat.jpeg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-menu__link {
+    color: lime;
+  }
 }
 
 .main-menu__link--active {
@@ -139,4 +158,38 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
+}
+
+.card {
+  width: 350px;
+  background-color: #aaa;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  box-shadow: 5px 5px 7px 0 #bbb;
+  margin-bottom: 2rem;
+}
+
+.card--blue {
+  background-color: royalblue;
+}
+
+.card__figure {
+  margin: 0;
+}
+
+.card__img {
+  border-radius: 15px;
+  max-width: 100%;
+}
+
+.card__figcaption {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.card__buttons {
+  display: flex;
+  justify-content: space-evenly;
 }
